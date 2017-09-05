@@ -1,0 +1,13 @@
+1	pip install Django - command indicates the terminal is reaching out to the internet and finding the Django and pytz files. Django is a python frameworkd and pytz files are a world timezone definitions for python.
+2	pip list - lists all files within the pip mondule
+	Django (1.11.4)
+	pip (9.0.1)
+	pytz (2017.2)
+	setuptools (28.8.0)
+3	pip install Django (2nd) - returns requirement already satisfined
+4	pip freeze - returns a list Django==1.11.4 these are version notes avalable for Django
+				    pytz==2017.2
+5	pip freeze in desktop - returns the same as above
+6	pip uninstall Django - begins unintall and outputs all files that are uninstalled
+7	pip show Django - informations about the django authors, version, and other information
+8	pip show Flask - this command returns nothing probably because Flask has not been installed yet
