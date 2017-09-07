@@ -45,6 +45,9 @@ class Dragon(Animal):
 
 dog1 = Dog("bob")
 dragon1 = Dragon("Gary")
+cat = Animal("jill")
 
 
-dog1.walk().walk().walk().run().run().pet().displayHealth()
+dog1.displayHealth()
+dragon1.displayHealth()
+cat.displayHealth()
