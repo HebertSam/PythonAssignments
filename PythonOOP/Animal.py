@@ -50,4 +50,5 @@ cat = Animal("jill")
 
 dog1.displayHealth()
 dragon1.displayHealth()
+dragon1.dragonHealth()
 cat.displayHealth()
