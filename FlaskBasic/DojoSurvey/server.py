@@ -6,12 +6,10 @@ app.secret_key = '12345'
 @app.route('/')
 
 
-
-
 def index():
     return render_template('index.html')
 
-@app.route('/process', methods=['POST'])
+@app.route('/bob', methods=['POST'])
 def process():
     
     session['location'] = request.form['location']
