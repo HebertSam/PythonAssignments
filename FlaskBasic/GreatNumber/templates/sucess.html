@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>You got the number right!!!!</h1>
+    <h3>you guessed {{session['guess']}} and the number was {{session['num']}}</h3>
+
+    <form action="/process2" method="POST">
+        <input type="hidden" name="reset" value="reset">
+        <button type="submit">Play again!?!</button>
+    </form>
+</body>
+</html>
