@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Your Gold: {{session["my_gold"]}} </h1>
+
+    <form action="/process_money" method="POST">
+        <h3>Farm</h3>
+        <h5>(earns 10-20 golds)</h5>
+        <input type="hidden" name="get_gold" value="farm">
+        <button type="submit">Find Gold!</button>
+    </form>
+    <form action="/process_money" method="POST">
+        <h3>Cave</h3>
+        <h5>(earns 5-10 golds)</h5>
+        <input type="hidden" name="get_gold" value="cave">
+        <button type="submit">Find Gold!</button>
+    </form>
+    <form action="/process_money" method="POST">
+        <h3>House</h3>
+        <h5>(earns 2-5 golds)</h5>
+        <input type="hidden" name="get_gold" value="house">
+        <button type="submit">Find Gold!</button>
+    </form>
+    <form action="/process_money" method="POST">
+        <h3>Casino</h3>
+        <h5>(earns/takes 0-50 golds)</h5>
+        <input type="hidden" name="get_gold" value="casino">
+        <button type="submit">Find Gold!</button>
+    </form>
+    <br>
+    <form action="/process_money" method="POST">
+        <input type="hidden" name="get_gold" value="reset">
+        <button type="submit">Reset</button>
+    </form>
+
+    <h4>Activities:</h4>
+    <div style="height:200px; width:400px; overflow:auto" >
+        {% for i in session['activ'] %}
+            {% if "Lost" in i %}
+            <p style="color:red"> {% print i %} </p>
+            {%else%}
+            <p style="color:green"> {% print i %} </p>
+            {%endif%}
+        {% endfor %}
+    </div>
+</body>
+</html>
