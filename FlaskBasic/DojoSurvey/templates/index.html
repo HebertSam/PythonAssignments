@@ -8,20 +8,26 @@
 </head>
 <body>
     <form action="/bob" method="post">
-        Your Name: <input type="text" name="name">
-        Dojo Location:  <select name="location" id="">
+        Your Name: <input type="text" name="name"><br>
+        Dojo Location:  <select name="location" id=""><br>
                 <option value="Washington">Washington</option>
                 <option value="New York">New York</option>
                 <option value="Boston">Boston</option>
-        </select>
-
+        </select><br>
         Favorite Language:  <select name="FavLang" >
             <option value="Python">Python</option>
             <option value="Javascript">Javascript</option>
             <option value="Java">Java</option>
-        </select>
+        </select><br>
+        Comments: <textarea name="comment" cols="30" rows="10"></textarea><br>
         <input type="submit">
     </form>
-    
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{message}}<p>
+            {%endfor%}
+        {%endif%}
+    {%endwith%}
 </body>
 </html>
